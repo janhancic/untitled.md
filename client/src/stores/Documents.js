@@ -9,10 +9,17 @@ class DocumentsStore extends AbstractStore {
 	constructor() {
 		this._dispatchToken = AppDispatcher.register(this._handleAction.bind(this));
 
-		this._documents = [
-			'My document', 'Hey o', 'Fluflu'
-		];
-		this._currentDocumentId = 0;
+		this._documents = [];
+		this._currentDocumentId = null;
+
+		this._populateInitialData();
+	}
+
+	_populateInitialData() {
+		// TODO: I don't like this code
+		this._documents = window.__initial_data___.documents.documents;
+		this._currentDocumentId = window.__initial_data___.documents.currentDocumentId;
+		this.emitChange();
 	}
 
 	getAllDocuments() {
@@ -37,6 +44,7 @@ class DocumentsStore extends AbstractStore {
 				}
 
 				this._currentDocumentId = action.documentId;
+				document.title = this.getCurrentDocumentName();
 				this.emitChange();
 			break;
 
