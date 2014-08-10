@@ -38,7 +38,7 @@ module.exports = React.createClass({
 	render: function() {
 		var tabs = [];
 
-		this.state.tabs.forEach(function(tab, idx) {
+		this.state.tabs.forEach((tab, idx) => {
 			tabs.push(
 				<Tab
 					name={tab}
@@ -46,7 +46,7 @@ module.exports = React.createClass({
 					onClick={this._onTabClick.bind(this, idx)}
 				/>
 			);
-		}.bind(this));
+		});
 
 		return (
 			<section className='tabs-container'>{tabs}</section>
