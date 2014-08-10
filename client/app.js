@@ -7,3 +7,6 @@ var UntitledMd = require('./src/components/UntitledMd.js');
 require('./app.less');
 
 React.renderComponent(<UntitledMd/>, document.body);
+
+// put React on the window object so that React Web Tools works
+window.React = React;
