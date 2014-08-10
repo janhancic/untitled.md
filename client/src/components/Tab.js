@@ -12,7 +12,8 @@ module.exports = React.createClass({
 
 	propTypes: {
 		name: PropTypes.string.isRequired,
-		selected: PropTypes.bool
+		selected: PropTypes.bool,
+		onClick: PropTypes.func.isRequired
 	},
 
 	getDefaultProps: function() {
@@ -28,7 +29,7 @@ module.exports = React.createClass({
 		}
 
 		return (
-			<div className={cssClass}>{this.props.name}</div>
+			<div className={cssClass} onClick={this.props.onClick}>{this.props.name}</div>
 		);
 	}
 });
