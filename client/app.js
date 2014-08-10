@@ -7,7 +7,20 @@ window.__DEV__ = true
 // temp code (this will be fetched from the server and embeded into the document)
 window.__initial_data___ = {
 	documents: {
-		documents: ['My document', 'Hey o', 'Fluflu'],
+		documents: [
+			{
+				title: 'My md 1',
+				contents: '# Hello'
+			},
+			{
+				title: 'README',
+				contents: '# README'
+			},
+			{
+				title: 'CONTRIB',
+				contents: '# Contributing'
+			}
+		],
 		currentDocumentId: 0
 	}
 };

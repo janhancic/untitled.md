@@ -30,7 +30,7 @@ class DocumentsStore extends AbstractStore {
 		return this._currentDocumentId;
 	}
 
-	getCurrentDocumentName() {
+	getCurrentDocument() {
 		return this._documents[this._currentDocumentId];
 	}
 
@@ -44,7 +44,7 @@ class DocumentsStore extends AbstractStore {
 				}
 
 				this._currentDocumentId = action.documentId;
-				document.title = this.getCurrentDocumentName();
+				document.title = this.getCurrentDocument().title;
 				this.emitChange();
 			break;
 

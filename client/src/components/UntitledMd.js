@@ -10,7 +10,7 @@ var DocumentsStore = require('../stores/Documents');
 
 function getState() {
 	return {
-		documentName: DocumentsStore.getCurrentDocumentName()
+		documentName: DocumentsStore.getCurrentDocument().name
 	}
 }
 

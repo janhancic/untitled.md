@@ -11,7 +11,7 @@ module.exports = React.createClass({
 
 	render: function() {
 		return (
-			<textarea className='editor' />
+			<textarea className='editor' value={this.props.value} />
 		);
 	}
 });

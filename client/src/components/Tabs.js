@@ -41,7 +41,7 @@ module.exports = React.createClass({
 		this.state.tabs.forEach((tab, idx) => {
 			tabs.push(
 				<Tab
-					name={tab}
+					name={tab.title}
 					selected={idx === this.state.selectedTab}
 					onClick={this._onTabClick.bind(this, idx)}
 				/>

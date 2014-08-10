@@ -11,7 +11,7 @@ module.exports = React.createClass({
 
 	render: function() {
 		return (
-			<div className='markdown-viewer'>here be md</div>
+			<div className='markdown-viewer'>{this.props.markdown}</div>
 		);
 	}
 });
