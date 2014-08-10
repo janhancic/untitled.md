@@ -1,1 +1,0 @@
-module.exports = 'aaaaa 123 dadadadsad333';

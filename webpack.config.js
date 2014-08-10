@@ -1,14 +1,13 @@
-var clientPath = './client';
-
 module.exports = {
-	entry: clientPath + '/app.js',
+	context: __dirname + "/client",
+	entry: "./app.jsx",
 	output: {
-		path: clientPath + '/bundles',
-		filename: 'bundle.js'
-	}/*,
+		path: __dirname + "/client/bundles",
+		filename: "bundle.js"
+	},
 	module: {
 		loaders: [
-			{ test: /\.css$/, loader: "style!css" }
+			{ test: /\.jsx$/, loader: 'jsx-loader' }
 		]
-	}*/
-};
+	}
+}

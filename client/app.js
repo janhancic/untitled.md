@@ -1,1 +1,0 @@
- document.write(require("./src/content.js"));

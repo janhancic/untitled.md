@@ -9,6 +9,8 @@
   "author": "Jan Hancic",
   "license": "MIT",
   "devDependencies": {
-    "webpack": "~1.3.2-beta8"
+    "webpack": "~1.3.2-beta8",
+    "react": "~0.11.1",
+    "jsx-loader": "~0.11.0"
   }
 }
