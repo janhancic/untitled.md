@@ -2,9 +2,13 @@
 
 'use strict';
 
+window.__DEV__ = true
+
+require('./styles/app.less');
+
 var React = require('react');
 var UntitledMd = require('./src/components/UntitledMd.js');
-require('./styles/app.less');
+var DocumentsStore = require('./src/stores/Documents');
 
 React.renderComponent(<UntitledMd/>, document.body);
 

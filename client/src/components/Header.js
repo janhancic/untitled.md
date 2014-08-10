@@ -11,7 +11,7 @@ module.exports = React.createClass({
 
 	render: function() {
 		return (
-			<header>I am a header</header>
+			<header>I am a header. Showing document: {this.props.documentName}</header>
 		);
 	}
 });

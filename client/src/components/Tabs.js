@@ -6,15 +6,33 @@ require('../../styles/tabs.less');
 
 var React = require('react');
 var Tab = require('./Tab');
+var AppActionsCreator = require('../AppActionsCreator');
+var DocumentsStore = require('../stores/Documents');
+
+function getState() {
+	return {
+		tabs: DocumentsStore.getAllDocuments(),
+		selectedTab: DocumentsStore.getCurrentDocumentId()
+	};
+}
 
 module.exports = React.createClass({
 	displayName: 'Tabs',
 
 	getInitialState: function() {
-		return {
-			tabs: ['tab1', 'tab2', 'tab3'],
-			selectedTab: 0
-		}
+		return getState();
+	},
+
+	componentDidMount: function() {
+		DocumentsStore.addChangeListener(this._onChange);
+	},
+
+	componentWillUnmount: function() {
+		DocumentsStore.removeChangeListener(this._onChange);
+	},
+
+	_onChange: function() {
+		this.setState(getState());
 	},
 
 	render: function() {
@@ -36,10 +54,6 @@ module.exports = React.createClass({
 	},
 
 	_onTabClick: function(tab) {
-		if (tab === this.state.selectedTab) {
-			return;
-		}
-
-		this.setState({selectedTab: tab});
+		AppActionsCreator.openDocument(tab);
 	}
 });
