@@ -2,7 +2,7 @@
 
 'use strict';
 
-require('./tab.less');
+require('../../styles/tab.less');
 
 var React = require('react');
 var PropTypes = React.PropTypes;

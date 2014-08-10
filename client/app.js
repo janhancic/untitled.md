@@ -4,7 +4,7 @@
 
 var React = require('react');
 var UntitledMd = require('./src/components/UntitledMd.js');
-require('./app.less');
+require('./styles/app.less');
 
 React.renderComponent(<UntitledMd/>, document.body);
 

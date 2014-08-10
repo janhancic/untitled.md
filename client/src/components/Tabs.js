@@ -2,7 +2,7 @@
 
 'use strict';
 
-require('./tabs.less');
+require('../../styles/tabs.less');
 
 var React = require('react');
 var Tab = require('./Tab');

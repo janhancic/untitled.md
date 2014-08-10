@@ -2,7 +2,7 @@
 
 'use strict';
 
-require('./editor.less');
+require('../../styles/editor.less');
 
 var React = require('react');
 

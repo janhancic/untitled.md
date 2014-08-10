@@ -2,7 +2,7 @@
 
 'use strict';
 
-require('./header.less');
+require('../../styles/header.less');
 
 var React = require('react');
 
