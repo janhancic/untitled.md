@@ -1,11 +1,11 @@
 'use strict';
 
-var EventEmitter = require('events').EventEmitter;
+var AbstractStore = require('../AbstractStore');
 var AppDispatcher = require('../AppDispatcher');
 var AppConstants = require('../AppConstants');
 var AppActions = AppConstants.actions;
 
-class DocumentsStore extends EventEmitter {
+class DocumentsStore extends AbstractStore {
 	constructor() {
 		this._dispatchToken = AppDispatcher.register(this._handleAction.bind(this));
 
@@ -25,22 +25,6 @@ class DocumentsStore extends EventEmitter {
 
 	getCurrentDocumentName() {
 		return this._documents[this._currentDocumentId];
-	}
-
-	getDispatchToken() {
-		return this._dispatchToken;
-	}
-
-	addChangeListener(callback) {
-		this.on(AppConstants.events.CHANGE, callback);
-	}
-
-	removeChangeListener(callback) {
-		this.removeListener(AppConstants.events.CHANGE, callback);
-	}
-
-	emitChange() {
-		this.emit(AppConstants.events.CHANGE);
 	}
 
 	_handleAction(payload) {
