@@ -5,15 +5,17 @@
 require('../../styles/work_area.less');
 
 var React = require('react');
+var Editor = require('./Editor');
+var MarkdownViewer = require('./MarkdownViewer');
 
 module.exports = React.createClass({
-	displayName: 'Editor',
+	displayName: 'WorkArea',
 
 	render: function() {
 		return (
 			<section className='work-area'>
-				<textarea></textarea>
-				<textarea></textarea>
+				<Editor />
+				<MarkdownViewer />
 			</section>
 		);
 	}
