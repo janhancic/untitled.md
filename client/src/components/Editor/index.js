@@ -9,7 +9,10 @@ var React = require('react');
 module.exports = React.createClass({
 	render: function() {
 		return (
-			<section className='editor-container'>Here be editor</section>
+			<section className='editor-container'>
+				<textarea></textarea>
+				<textarea></textarea>
+			</section>
 		);
 	}
 });
