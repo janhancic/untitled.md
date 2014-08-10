@@ -8,6 +8,8 @@ var Tabs = require('./Tabs');
 var Editor = require('./Editor');
 
 module.exports = React.createClass({
+	displayName: 'UntitledMd',
+
 	render: function() {
 		return (
 			<div>
