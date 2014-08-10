@@ -2,12 +2,14 @@
 
 'use strict';
 
+require('./editor.less');
+
 var React = require('react');
 
 module.exports = React.createClass({
 	render: function() {
 		return (
-			<header>I am a header</header>
+			<section className='editor-container'>Here be editor</section>
 		);
 	}
 });
