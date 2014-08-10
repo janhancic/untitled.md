@@ -2,7 +2,7 @@
 
 'use strict';
 
-require('../../styles/editor.less');
+require('../../styles/work_area.less');
 
 var React = require('react');
 
@@ -11,7 +11,7 @@ module.exports = React.createClass({
 
 	render: function() {
 		return (
-			<section className='editor-container'>
+			<section className='work-area'>
 				<textarea></textarea>
 				<textarea></textarea>
 			</section>

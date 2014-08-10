@@ -5,7 +5,7 @@
 var React = require('react');
 var Header = require('./Header');
 var Tabs = require('./Tabs');
-var Editor = require('./Editor');
+var WorkArea = require('./WorkArea');
 
 module.exports = React.createClass({
 	displayName: 'UntitledMd',
@@ -15,7 +15,7 @@ module.exports = React.createClass({
 			<div>
 				<Header/>
 				<Tabs/>
-				<Editor/>
+				<WorkArea/>
 			</div>
 		);
 	}
