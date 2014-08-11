@@ -28,6 +28,14 @@ window.__initial_data___ = {
 
 require('./styles/app.less');
 
+// TODO: come up with some other way to include CSS in the page ...
+require('./styles/header.less');
+require('./styles/tabs.less');
+require('./styles/tab.less');
+require('./styles/work_area.less');
+require('./styles/editor.less');
+require('./styles/markdown_viewer.less');
+
 var React = require('react');
 var UntitledMd = require('./src/components/UntitledMd.js');
 

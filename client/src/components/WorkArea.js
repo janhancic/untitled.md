@@ -2,8 +2,6 @@
 
 'use strict';
 
-require('../../styles/work_area.less');
-
 var React = require('react');
 var Editor = require('./Editor');
 var MarkdownViewer = require('./MarkdownViewer');

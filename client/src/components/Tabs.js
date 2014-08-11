@@ -2,8 +2,6 @@
 
 'use strict';
 
-require('../../styles/tabs.less');
-
 var React = require('react');
 var Tab = require('./Tab');
 var AppActionsCreator = require('../AppActionsCreator');

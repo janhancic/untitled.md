@@ -2,8 +2,6 @@
 
 'use strict';
 
-require('../../styles/markdown_viewer.less');
-
 var React = require('react');
 
 module.exports = React.createClass({

@@ -2,8 +2,6 @@
 
 'use strict';
 
-require('../../styles/editor.less');
-
 var React = require('react');
 
 module.exports = React.createClass({
