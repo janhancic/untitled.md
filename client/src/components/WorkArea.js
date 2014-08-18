@@ -35,9 +35,16 @@ module.exports = React.createClass({
 	render: function() {
 		return (
 			<section className='work-area'>
-				<Editor value={this.state.contents} />
+				<Editor
+					value={this.state.contents}
+					onChange={this._onEditorChange}
+				/>
 				<MarkdownViewer markdown={this.state.contents} />
 			</section>
 		);
+	},
+
+	_onEditorChange: function(newValue) {
+		this.setState({contents: newValue});
 	}
 });
