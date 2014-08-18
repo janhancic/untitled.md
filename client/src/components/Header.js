@@ -9,7 +9,9 @@ module.exports = React.createClass({
 
 	render: function() {
 		return (
-			<header>I am a header. Showing document: {this.props.documentTitle}.</header>
+			<header>
+				I am a header. Showing document: {this.props.documentTitle}.
+			</header>
 		);
 	}
 });
