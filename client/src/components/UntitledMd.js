@@ -10,7 +10,7 @@ var DocumentsStore = require('../stores/Documents');
 
 function getState() {
 	return {
-		documentName: DocumentsStore.getCurrentDocument().name
+		documentTitle: DocumentsStore.getCurrentDocument().title
 	}
 }
 
@@ -36,7 +36,7 @@ module.exports = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<Header documentName={this.state.documentName} />
+				<Header documentTitle={this.state.documentTitle} />
 				<Tabs/>
 				<WorkArea/>
 			</div>
